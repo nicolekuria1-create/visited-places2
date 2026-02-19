@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Places You've Been</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Places You've Been</h1>
+    <p class="intro-description">Welcome to your personal travel journal. Capture your adventures, document the landmarks you've discovered, and preserve the memories of every place you've visited. Write your thoughts, add photos, and create a beautiful record of your travels.</p>
+
+    <div id="notification" class="notification hidden"></div>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Add a Place</h2>
+
+        <form id="placeForm">
+          <label>Place Name</label>
+          <input type="text" id="placeName" required />
+
+          <label>Location</label>
+          <input type="text" id="placeLocation" required />
+
+          <label>Landmarks</label>
+          <input type="text" id="placeLandmarks" placeholder="e.g. Uhuru Park, KICC" />
+
+          <label>Time of Year</label>
+          <input type="text" id="placeTime" placeholder="e.g. December 2024" />
+
+          <label>Image URL</label>
+          <input type="url" id="placeImageUrl" placeholder="https://example.com/photo.jpg" />
+
+          <label>Notes</label>
+          <textarea id="placeNotes" placeholder="Write something memorable..."></textarea>
+
+          <button type="submit">Add Place</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Saved Places</h2>
+        <ul id="placesList"></ul>
+      </section>
+    </div>
+
+  </div>
+
+  <script src="js/place.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

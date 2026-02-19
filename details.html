@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Place Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Place Details</h1>
+
+    <section class="card journal-card">
+      <div class="details-header">
+        <h2>Journal Entry</h2>
+        <div class="details-actions">
+          <button type="button" id="editBtn" class="secondary-btn">Edit Entry</button>
+          <button type="button" id="cancelEditBtn" class="secondary-btn hidden">Cancel</button>
+        </div>
+      </div>
+
+      <div id="detailsContent" class="journal-content"></div>
+
+      <div id="gallerySection" class="gallery-section hidden">
+        <h3>Photo Gallery</h3>
+        <div id="galleryImages" class="gallery-grid"></div>
+        <button type="button" id="toggleAddImageBtn" class="secondary-btn">Add More Images</button>
+        <form id="addImageForm" class="hidden">
+          <label>Add Image URL</label>
+          <input type="url" id="newImageUrl" placeholder="https://example.com/photo.jpg" />
+          <button type="submit">Add Image</button>
+          <button type="button" id="cancelAddImageBtn" class="secondary-btn">Cancel</button>
+        </form>
+      </div>
+
+      <form id="editForm" class="hidden">
+        <label>Name</label>
+        <input type="text" id="editName" required />
+
+        <label>Location</label>
+        <input type="text" id="editLocation" required />
+
+        <label>Landmarks</label>
+        <input type="text" id="editLandmarks" />
+
+        <label>Time of Year</label>
+        <input type="text" id="editTime" />
+
+        <label>Main Image URL</label>
+        <input type="url" id="editImageUrl" />
+
+        <label>Journal</label>
+        <textarea id="editNotes" placeholder="Write your journal entry..."></textarea>
+
+        <button type="submit">Save Changes</button>
+      </form>
+      <p>
+        <a href="index.html">Back to Places</a>
+      </p>
+    </section>
+  </div>
+
+  <script src="js/place.js"></script>
+  <script src="js/details.js"></script>
+</body>
+</html>
